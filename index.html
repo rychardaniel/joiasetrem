@@ -29,12 +29,12 @@
     <h2>JOIA SETREM</h2>
     <p>um pouco de texto no corpo, <br>sendo usado para exemplo de texto</p> <!-- Comentários em HTML -->
     <script>
-        var nome = window.prompt('Qual é seu nome?') // Vai mostrar uma janela com o aviso e uma caixa de texto.
+        var nome = window.prompt('Qual é seu nome?').trim() // Vai mostrar uma janela com o aviso e uma caixa de texto.
         document.write(`Olá, ${nome}! Como vai?<br>`)
         document.write(`Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em maiúsculas é "${nome.toUpperCase()}"<br>`)
-        document.write(`Seu nome em maiúsculas é "${nome.toLowerCase()}"<br>`)
-        document.write("<h2>Seus dados foram enviados para os lugares necessários!</h2>")   
+        document.write(`Seu nome em minúsculas é "${nome.toLowerCase()}"<br>`)
+        document.write("<h2>Seus dados foram enviados para os lugares necessários!</h2>")
     </script>
 </body>
 </html>
