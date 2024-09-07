@@ -6,25 +6,35 @@
     <title>Joia Setrem</title>
     <style>
         body {
-            background-color: rgb(0, 191, 111);
+            background-color: rgb(0, 191, 111); /*Comentário em CSS*/
             color: white;
             font: normal 10pt Arial;
         } h1 {
             color: black;
+            font: normal 20pt Arial;
+            text-align: center;
+        } h2 {
+            color: red;
         } p {
             color: yellow;
+        } hr {
+            width: 50%;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <h1>JOIA SETREM</h1>
-    <p>este site tem como objetivo, mostrar placare de jogos do joia</p>
-    <p>Olá</p>
+    <h1>Texto Master</h1>
+    <hr>
+    <h2>JOIA SETREM</h2>
+    <p>um pouco de texto no corpo, <br>sendo usado para exemplo de texto</p> <!-- Comentários em HTML -->
     <script>
-        window.alert('Olá!!!')
-        window.confirm('Meu primeiro site né pae')
-        var nome = window.prompt('Qual é seu nome')
-
+        var nome = window.prompt('Qual é seu nome?') // Vai mostrar uma janela com o aviso e uma caixa de texto.
+        document.write(`Olá, ${nome}! Como vai?<br>`)
+        document.write(`Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é "${nome.toUpperCase()}"<br>`)
+        document.write(`Seu nome em maiúsculas é "${nome.toLowerCase()}"<br>`)
+        document.write("<h2>Seus dados foram enviados para os lugares necessários!</h2>")   
     </script>
 </body>
 </html>
