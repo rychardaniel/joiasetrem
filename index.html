@@ -28,13 +28,21 @@
     <hr>
     <h2>JOIA SETREM</h2>
     <p>um pouco de texto no corpo, <br>sendo usado para exemplo de texto</p> <!-- Comentários em HTML -->
+
+    <!-- Carrega o arquivo .js que envia os dados -->
+    <script src="enviarDadosSheets.js"></script> 
+
     <script>
-        var nome = window.prompt('Qual é seu nome?').trim() // Vai mostrar uma janela com o aviso e uma caixa de texto.
+        var nome = window.prompt('Qual é seu nome?').trim() // Solicita o nome e retira os espaços das pontas
         document.write(`Olá, ${nome}! Como vai?<br>`)
         document.write(`Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em maiúsculas é "${nome.toUpperCase()}"<br>`)
         document.write(`Seu nome em minúsculas é "${nome.toLowerCase()}"<br>`)
         document.write("<h2>Seus dados foram enviados para os lugares necessários!</h2>")
+
+        // Inicia a função que envia os dados para a planilha Sheets
+        enviarDadosSheets(nome);
+        
     </script>
 </body>
 </html>
