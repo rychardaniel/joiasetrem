@@ -33,7 +33,10 @@
     <script src="enviarDadosSheets.js"></script> 
 
     <script>
+        
         var nome = window.prompt('Qual é seu nome?').trim() // Solicita o nome e retira os espaços das pontas
+        const dataAtual = new Date(); //Define a data e o horário que o usuário preenche o nome
+
         document.write(`Olá, ${nome}! Como vai?<br>`)
         document.write(`Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em maiúsculas é "${nome.toUpperCase()}"<br>`)
@@ -41,7 +44,7 @@
         document.write("<h2>Seus dados foram enviados para os lugares necessários!</h2>")
 
         // Inicia a função que envia os dados para a planilha Sheets
-        enviarDadosSheets(nome);
+        enviarDadosSheets(nome, dataAtual);
 
     </script>
 </body>

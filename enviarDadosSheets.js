@@ -1,9 +1,10 @@
-function enviarDadosSheets(nome) {
+function enviarDadosSheets(nome, dataAtual) {
     // URL do Google Apps Script Web App
-    var url = "https://script.google.com/macros/s/AKfycbw8MzUkafLE5FuxD6XofXC8hVAdSMAZpk2a0Z06aRPpKeOEJcTBVOc2VKdo9qSIKNIz/exec"; // URL do Google Apps Script
+    var url = "https://script.google.com/macros/s/AKfycbwzJjMptFrrHv0C0RdqMiY0FB2ZRaa_pZSMh7BNL2dgH1zkR7XS2urlr_3Gx0_1lQlx/exec"; // URL do Google Apps Script
 
-    // Codifica o "nome" para que seja enviados caracteres como "á", "é", "ç"
-    var nomeCodificado = encodeURIComponent(nome);
+    // Codifica o as váriaveis para que sejam enviados caracteres como "á", "é", "ç"
+    let nomeCodificado = encodeURIComponent(nome);
+    let dataCodificada = encodeURIComponent(dataAtual);
 
     // Enviar os dados usando uma requisição POST
     fetch(url, {
@@ -11,7 +12,7 @@ function enviarDadosSheets(nome) {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `nome=${nomeCodificado}` // Enviar o nome do usuário
+        body: `nome=${nomeCodificado}&data=${dataCodificada}` // Enviar o nome e data do usuário
     })
     .then(response => response.text())
     .then(data => {
