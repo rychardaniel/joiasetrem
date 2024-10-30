@@ -1,7 +1,7 @@
 function enviarDados() {
-    
+
     // URL para enviar os dados para a Google Sheets
-    let url = "https://script.google.com/macros/s/AKfycbwzJjMptFrrHv0C0RdqMiY0FB2ZRaa_pZSMh7BNL2dgH1zkR7XS2urlr_3Gx0_1lQlx/exec";
+    let url = "https://script.google.com/macros/s/AKfycbyzb7Puw1hm_Ez8M0AloO0do0zICRIeUjEUJjsCwZy_gJyZZ98V5C4Bv5y4opk7CPzP/exec";
 
     let caixaDeTexto = window.document.getElementById("inputdenome");
 
@@ -22,13 +22,13 @@ function enviarDados() {
             },
             body: `nome=${textoDigitadoCodificado}&data=${dataAtualCodificada}` // Enviar o nome e data do usuário
         })
-        .then(response => response.text())
-        .then(data => {
-            console.log("Dados enviados com sucesso: " + data);
-        })
-        .catch(error => {
-            console.error('Erro ao enviar os dados:', error);
-        });
+            .then(response => response.text())
+            .then(data => {
+                console.log("Dados enviados com sucesso: " + data);
+            })
+            .catch(error => {
+                console.error('Erro ao enviar os dados:', error);
+            });
 
         resultado.innerHTML = `Olá, ${textoDigitado}! Como vai?<br>`
         resultado.innerHTML += `Seu nome tem ${textoDigitado.length} letras.<br>`
@@ -40,9 +40,10 @@ function enviarDados() {
 
     } else {
         caixaDeTexto.placeholder = "Digite algum texto!"
+        caixaDeTexto.value = ""
         resultado.innerHTML = ""
 
     }
 
-    
+
 }
